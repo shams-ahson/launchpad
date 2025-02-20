@@ -1,0 +1,3 @@
+SYSTEM STATUS: Interactive launch terminal awaiting 4-digit secret code.
+WARNING: Launch code stored in variable "SECRET_CODE."
+ANALYSIS: Timing attack possible. Test one digit at a time. Note delays.
