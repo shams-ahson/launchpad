@@ -1,3 +1,18 @@
 SYSTEM STATUS: Interactive launch terminal awaiting 4-digit secret code.
 WARNING: Launch code stored in variable "SECRET_CODE."
 ANALYSIS: Timing attack possible. Test one digit at a time. Note delays.
+def check_code(user_input):
+    """Check the input code against the secret code with timing attack vulnerability"""
+    for i in range(len(user_input)):
+        if user_input[i] != SECRET_CODE[i]:
+            time.sleep(0.1 * (i + 1))  # Intentional delay based on correct digits
+            return False
+    return True
+def ascii_to_hex():  
+    '''Convert ASCII to Hexadecimal'''         
+        ascii = "EW"    
+        temp = []
+        for i in ascii:
+            s=hex(ord(i))
+            temp.append(s[2:])
+            SECRET_CODE = ''.join(temp)
